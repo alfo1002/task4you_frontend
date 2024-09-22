@@ -20,3 +20,6 @@
 
 - Instalando React Toastify
   npm i react-toastify
+
+- Instalando React-Query
+  npm i @tanstack/react-query
