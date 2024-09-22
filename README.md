@@ -8,3 +8,7 @@
 
 - Agregar headless ui
   npm i @headlessui/react @heroicons/react
+
+- Agregar librería para manejo de formularios
+  npm i react-hook-form
+
