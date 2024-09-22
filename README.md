@@ -12,3 +12,5 @@
 - Agregar librería para manejo de formularios
   npm i react-hook-form
 
+- Instalando Zod para types
+  npm i zod
