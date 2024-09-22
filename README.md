@@ -17,3 +17,6 @@
 
 - Instalando Axios
   npm i axios
+
+- Instalando React Toastify
+  npm i react-toastify
