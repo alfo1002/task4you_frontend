@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, Navigate, useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import ProjectForm from "@/components/projects/ProjectForm"
 import { ProjectFormData } from "@/types"
@@ -6,6 +6,7 @@ import { createProject } from "@/api/ProjectAPI"
 
 export const CreateProjectView = () => {
 
+    const navigate = useNavigate()
     const initialValues: ProjectFormData = {
         projectName: "",
         clientName: "",
@@ -14,9 +15,9 @@ export const CreateProjectView = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm({ defaultValues: initialValues })
 
-    const handleForm = (data: ProjectFormData) => {
-        console.log("ddd:", data)
-        createProject(data)
+    const handleForm = async (data: ProjectFormData) => {
+        await createProject(data)
+        navigate('/')
     }
 
     return (
