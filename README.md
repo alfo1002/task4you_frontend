@@ -14,3 +14,6 @@
 
 - Instalando Zod para types
   npm i zod
+
+- Instalando Axios
+  npm i axios
