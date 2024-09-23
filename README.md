@@ -23,3 +23,6 @@
 
 - Instalando React-Query
   npm i @tanstack/react-query
+
+  - Devtools:
+    npm i @tanstack/react-query-devtools
