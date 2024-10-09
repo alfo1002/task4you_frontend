@@ -26,3 +26,6 @@
 
   - Devtools:
     npm i @tanstack/react-query-devtools
+
+- Instalando Chakra
+  npm i @chakra-ui/pin-input
