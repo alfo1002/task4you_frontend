@@ -6,13 +6,18 @@ const authSchema = z.object({
     name: z.string(),
     email: z.string().email(),
     password: z.string().min(6),
-    password_confirmation: z.string().min(6)
+    password_confirmation: z.string().min(6),
+    token: z.string()
 })
 
 type Auth = z.infer<typeof authSchema>
 export type UserLoginForm = Pick<Auth, 'email' | 'password'>
 export type UserRegistrationForm = Pick<Auth, 'name' | 'email' | 'password' | 'password_confirmation'>
 export type RequestConfirmationCodeForm = Pick<Auth, 'email'>
+export type ConfirmToken = Pick<Auth, 'token'>
+export type ForgotPasswordForm = Pick<Auth, 'email'>
+export type NewPasswordForm = Pick<Auth, 'password' | 'password_confirmation'>
+
 // Task
 export const taskStatusSchema = z.enum(["pending", "onHold", "inProgress", "underReview", "completed"])
 export type TaskStatus = z.infer<typeof taskStatusSchema>
