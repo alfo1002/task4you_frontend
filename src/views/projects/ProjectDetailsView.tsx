@@ -4,7 +4,7 @@ import { EditTaskData } from "@/components/tasks/EditTaskData"
 import { TaskList } from "@/components/tasks/TaskList"
 import TaskModalDetails from "@/components/tasks/TaskModalDetails"
 import { useQuery } from "@tanstack/react-query"
-import { Navigate, useNavigate, useParams } from "react-router-dom"
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom"
 
 export const ProjectDetailsView = () => {
 
@@ -32,6 +32,12 @@ export const ProjectDetailsView = () => {
                 >
                     Agregar Tarea
                 </button>
+                <Link
+                    className="bg-pink-700 hover:bg-pink-900 px-10 py-3 text-white text-xl
+                font-bold cursor-pointer transition-colors duration-300 ease-in-out"
+                    to={'team'}>
+                    Colaboradores
+                </Link>
             </nav>
             <TaskList
                 tasks={data.tasks}
