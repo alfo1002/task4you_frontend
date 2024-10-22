@@ -4,6 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import { TeamMemberForm } from "@/types";
 import { ErrorMessage } from "../ErrorMessage";
 import { findUserByEmail } from "@/api/TeamAPI";
+import { SearchResult } from "./SearchResult";
 
 export default function AddMemberForm() {
     const initialValues: TeamMemberForm = {
@@ -65,6 +66,7 @@ export default function AddMemberForm() {
             <div className="mt-10">
                 {mutation.isPending && <p>Buscando Usuario...</p>}
                 {mutation.error && <p className="text-center">{mutation.error.message}</p>}
+                {mutation.data && <SearchResult user={mutation.data} />}
             </div>
 
         </>
