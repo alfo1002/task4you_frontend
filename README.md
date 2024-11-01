@@ -29,3 +29,6 @@
 
 - Instalando Chakra
   npm i @chakra-ui/pin-input
+
+- Instalando DNDKIT
+  npm i @dnd-kit/core

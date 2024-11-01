@@ -1,4 +1,4 @@
-import { Link, Navigate, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import ProjectForm from "./ProjectForm"
 import { Project, ProjectFormData } from "@/types"
 import { useForm } from "react-hook-form"
